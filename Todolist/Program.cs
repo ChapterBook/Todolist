@@ -214,3 +214,7 @@ static void ShowNoTodoMessage()
 {
     Console.WriteLine("No TODOs have been added yet.");
 }
+static void ShowInvalidChoiceMessage()
+{
+    Console.WriteLine("Invalid choice.");
+}
