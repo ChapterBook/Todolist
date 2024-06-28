@@ -1,4 +1,5 @@
-﻿Console.WriteLine("Hello!");
+﻿
+Console.WriteLine("Hello!");
 
 
 
@@ -127,47 +128,22 @@ void removeTodo()
         ShowNoTodoMessage();
         return;
     }
-    bool remove = true;
+    int index;
     do
     {
         Console.WriteLine("Selected index of the TODO you want to remove");
         selectAllTodos();
-        var selectedIndex = Console.ReadLine();
-        if (selectedIndex == "")
-        {
-            Console.WriteLine("Selected index cannot be empty.");
-            continue;
-        }
-        if (int.TryParse(selectedIndex, out int index) && index >= 1 && index <= todos.Count)
-        {
-            var indexOfTodo = index - 1;
-            var tobeRemoved = todos[indexOfTodo];
-            todos.RemoveAt(indexOfTodo);
-            remove = false;
-            Console.WriteLine("TODO removed: " + tobeRemoved);
-        }
-        else
-        {
-            Console.WriteLine("The given index is not valid.");
-        }
-        /*            int index = int.Parse(selectedIndex) - 1 ;
+    } while (!TryReadIndex(out index));
 
-                    if (checkIfRemoveTodo(index))//Kiểm tra xem vị trí biến có trong hàm todos không
-                    {
-                        var removedTodo = todos[index];
-                        todos.RemoveAt(index);
-                        Console.WriteLine("TODO removed: " + removedTodo );
-                        remove = false;
-                    }
-                    else if (selectedIndex == "")//Kiểm tra xem vị trí biến có rỗng không
-                    {
-                        Console.WriteLine("Selected index cannot be empty.");
-                    }
-                    else//Kiểm tra vị trí biến có hợp lệ không
-                    {
-                        Console.WriteLine("The given index is not valid.");
-                    }*/
-    } while (remove);
+    RemoveTodoAtIndex(index - 1);
+}
+
+void RemoveTodoAtIndex(int index)
+{
+    var indexOfTodo = index;
+    var tobeRemoved = todos[indexOfTodo];
+    todos.RemoveAt(index);
+    Console.WriteLine("TODO removed: " + tobeRemoved);
 }
 
 bool TryReadIndex(out int index)
@@ -181,16 +157,11 @@ bool TryReadIndex(out int index)
     }
     if (int.TryParse(selectedIndex, out index) && index >= 1 && index <= todos.Count)
     {
-        var indexOfTodo = index - 1;
-        var tobeRemoved = todos[indexOfTodo];
-        todos.RemoveAt(indexOfTodo);
-        Console.WriteLine("TODO removed: " + tobeRemoved);
+
         return true;
     }
-    else
-    {
-        Console.WriteLine("The given index is not valid.");
-    }
+    Console.WriteLine("The given index is not valid.");
+    return false;
     /*            int index = int.Parse(selectedIndex) - 1 ;
 
                 if (checkIfRemoveTodo(index))//Kiểm tra xem vị trí biến có trong hàm todos không
