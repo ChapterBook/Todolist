@@ -5,7 +5,11 @@ VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Todolist", "Todolist\Todolist.csproj", "{33A6F6A4-0A60-4536-89E8-54B728633F08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment_Calculator", "Assignment_Calculator\Assignment_Calculator.csproj", "{62800EE4-FE6E-4730-BE85-3A8FC379AC03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignment_Calculator", "Assignment_Calculator\Assignment_Calculator.csproj", "{62800EE4-FE6E-4730-BE85-3A8FC379AC03}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Abstraction", "Abstraction\Abstraction.csproj", "{ABE130EC-2BA4-4220-99A2-F2C1A4AE7057}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Retangles", "Retangles\Retangles.csproj", "{7A6E9828-DC7A-4F8B-8B35-FE3AA400841B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{62800EE4-FE6E-4730-BE85-3A8FC379AC03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62800EE4-FE6E-4730-BE85-3A8FC379AC03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62800EE4-FE6E-4730-BE85-3A8FC379AC03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABE130EC-2BA4-4220-99A2-F2C1A4AE7057}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABE130EC-2BA4-4220-99A2-F2C1A4AE7057}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABE130EC-2BA4-4220-99A2-F2C1A4AE7057}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABE130EC-2BA4-4220-99A2-F2C1A4AE7057}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A6E9828-DC7A-4F8B-8B35-FE3AA400841B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A6E9828-DC7A-4F8B-8B35-FE3AA400841B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A6E9828-DC7A-4F8B-8B35-FE3AA400841B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A6E9828-DC7A-4F8B-8B35-FE3AA400841B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
