@@ -1,12 +1,25 @@
 ﻿var medicalAppointment = new MedicalAppointment("John Smith", new DateTime(2023, 4, 3));
 
+//simple reschedule
+medicalAppointment.Reschedule(new DateTime(2023, 4, 4));
+
 //overwrite month and day
-medicalAppointment.Reschedule(5, 1);
+medicalAppointment.OverwriteMonthAndDay(5, 1);
 
 //add a given number of months and days
-medicalAppointment.Reschedule(1, 2);
+medicalAppointment.MoreByMonthsAndDays(1, 2);
+
+
 
 Console.ReadKey();
+
+class MedicalAppointmentPrinter 
+{
+    public void Print(MedicalAppointment medicalAppointment)
+    {
+        Console.WriteLine("Appointment will take place on " + medicalAppointment.GetDate());
+    }
+}
 
 class MedicalAppointment
 {
@@ -18,6 +31,8 @@ class MedicalAppointment
         _patientName = patientName;
         _date = date;
     }
+
+    public DateTime GetDate() => _date;
 
     public MedicalAppointment(string patientName) : this(patientName, 7)
     {
@@ -31,6 +46,8 @@ class MedicalAppointment
     public void Reschedule(DateTime date)
     {
         _date = date;
+        var printer  = new MedicalAppointmentPrinter();
+        printer.Print(this);
     }
 
     public void OverwriteMonthAndDay(int month, int day)

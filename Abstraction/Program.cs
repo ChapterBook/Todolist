@@ -30,15 +30,9 @@ class Retangle
 class ShapesMeasurementsCalculator
 {
 
-    public int CalculateRetangleArea(Retangle retangle)
-    {
-        return retangle.Width * retangle.Height;
-    }
+    public int CalculateRetangleArea(Retangle retangle) => retangle.Width * retangle.Height;
 
-    public int CalculateRetangleCircumference(Retangle retangle)
-    {
-        return 2 * (retangle.Width +retangle.Height);
-    }
+    public int CalculateRetangleCircumference(Retangle retangle) => 2 * (retangle.Width + retangle.Height);
 }
 
 public class Triangle
@@ -52,13 +46,9 @@ public class Triangle
         _height = height;
     }
 
-    public int CalculateArea()
-    {
-        return (_base * _height) / 2;
-    }
-    public string AsString()
-    {
-        return $"Base is {_base}, height is {_height}";
-    }
+    public int CalculateArea() => (_base * _height) / 2;
+
+    public string AsString() => $"Base is {_base}, height is {_height}";
+
 }
 
